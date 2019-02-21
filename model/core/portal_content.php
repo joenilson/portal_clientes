@@ -38,12 +38,12 @@ class portal_content extends \fs_model
     public $estado;
     
     public $array_tipos_contenido = array(
-        array ('id' => 'header_title', 'descripcion' => 'Título de Cabecera'),
-        array ('id' => 'header_text', 'descripcion' => 'Contenido de Cabecera'),
-        array ('id' => 'content_title', 'descripcion' => 'Título Central'),
-        array ('id' => 'content_text', 'descripcion' => 'Contenido Central'),
-        array ('id' => 'footer_title', 'descripcion' => 'Título de Pie de Página'),
-        array ('id' => 'footer_text', 'descripcion' => 'Contenido de Pie de Página')
+        array('id' => 'header_title', 'descripcion' => 'Título de Cabecera'),
+        array('id' => 'header_text', 'descripcion' => 'Contenido de Cabecera'),
+        array('id' => 'content_title', 'descripcion' => 'Título Central'),
+        array('id' => 'content_text', 'descripcion' => 'Contenido Central'),
+        array('id' => 'footer_title', 'descripcion' => 'Título de Pie de Página'),
+        array('id' => 'footer_text', 'descripcion' => 'Contenido de Pie de Página')
     );
     
     public function __construct($t = false)
@@ -169,7 +169,7 @@ class portal_content extends \fs_model
     {
         $data = $this->db->select("SELECT descripcion FROM ".$this->table_name." WHERE page_name = ".$this->var2str($page_name)." AND estado = TRUE;");
         $lista = array();
-        if($data) {
+        if ($data) {
             foreach ($data as $d) {
                 $item = new portal_content($d);
                 $lista[] = $item;

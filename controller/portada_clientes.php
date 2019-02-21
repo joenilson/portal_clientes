@@ -124,7 +124,7 @@ class portada_clientes extends fs_controller {
             /**
              * Por defecto usamos una vista con el mismo nombre que el controlador.
              */
-            $this->template = 'pclientes_public/' . $this->class_name;
+            $this->template = 'pclientes_public/'.$this->class_name;
         } else {
             /**
              * En este punto se puede utilizar otra página de login, en función

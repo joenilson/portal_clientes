@@ -18,7 +18,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-require_once __DIR__ . '/portada_clientes.php';
+require_once __DIR__.'/portada_clientes.php';
 require_model('factura_cliente.php');
 
 /**
