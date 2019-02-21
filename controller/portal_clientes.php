@@ -73,13 +73,13 @@ class portal_clientes extends fbase_controller {
         if (FS_HOMEPAGE != 'portada_clientes') {
             $GLOBALS['config2']['homepage'] = 'portada_clientes';
 
-            $file = fopen('tmp/' . FS_TMP_NAME . 'config2.ini', 'w');
+            $file = fopen('tmp/'.FS_TMP_NAME.'config2.ini', 'w');
             if ($file) {
                 foreach ($GLOBALS['config2'] as $i => $value) {
                     if (is_numeric($value)) {
-                        fwrite($file, $i . " = " . $value . ";\n");
+                        fwrite($file, $i." = ".$value.";\n");
                     } else {
-                        fwrite($file, $i . " = '" . $value . "';\n");
+                        fwrite($file, $i." = '".$value."';\n");
                     }
                 }
                 fclose($file);
