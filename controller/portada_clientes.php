@@ -39,6 +39,22 @@ class portada_clientes extends fs_controller {
      * @var type 
      */
     public $cliente;
+    
+    public $header_title;
+    
+    public $header_text;
+    
+    public $welcome_title;
+    
+    /**
+     * Mensaje de bienvenida
+     * @var string
+     */
+    public $welcome_text;
+    
+    public $footer_title;
+    
+    public $footer_text;
 
     public function __construct($name = '', $title = 'home', $folder = '', $admin = FALSE, $shmenu = FALSE, $important = FALSE) {
         if ($name == '') {
